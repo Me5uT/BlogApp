@@ -2,7 +2,8 @@
 import {View, Text, TouchableOpacity, Image} from 'react-native';
 import {styles} from './PostCard.styles';
 import {useNavigation} from '@react-navigation/native';
-import useData from '../../context/useData';
+import {useData} from '../../context/useData';
+import {totalReadingTimeFixer} from '../../utils/service/UtilityService';
 
 export interface IBlogCardProps {
   banner: string;
@@ -23,7 +24,10 @@ export const PostCard = ({
   const navigation = useNavigation();
 
   const handleTouch = () => {
+    // Set the content to the value of postContent
     setContent(postContent);
+
+    // Navigate to the 'PostDetail' screen using the navigation object
     navigation.navigate('PostDetail');
   };
 
@@ -54,7 +58,9 @@ export const PostCard = ({
 
         <View>
           <Text style={styles.totalReadingTime}>
-            {`${totalReadingTime} mins`}
+            {`Total Reading Time: ${totalReadingTimeFixer(
+              totalReadingTime,
+            )} mins`}
           </Text>
         </View>
       </View>

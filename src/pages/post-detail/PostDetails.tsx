@@ -1,6 +1,6 @@
 import React from 'react';
 import RenderHTML from 'react-native-render-html';
-import useData from '../../context/useData';
+import {useData} from '../../context/useData';
 import {ScrollView, View, useWindowDimensions} from 'react-native';
 import {styles} from './PostDetails.styles';
 

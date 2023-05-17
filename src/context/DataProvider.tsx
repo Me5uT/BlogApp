@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import {IResult} from '../models/IDataModel';
-import DataContext, {IDataContext} from './DataContext';
+import {DataContext} from './DataContext';
+import {IDataContext} from '../models/IDataContext';
 
 interface DataProviderProps {
   children: React.ReactNode;
 }
 
-const DataProvider: React.FC<DataProviderProps> = ({children}) => {
+export const DataProvider: React.FC<DataProviderProps> = ({children}) => {
   const [data, setData] = useState<IResult[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [pageNumber, setPageNumber] = useState<number>(0);
@@ -27,5 +28,3 @@ const DataProvider: React.FC<DataProviderProps> = ({children}) => {
     <DataContext.Provider value={contextValue}>{children}</DataContext.Provider>
   );
 };
-
-export default DataProvider;
