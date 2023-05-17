@@ -1,7 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import {useEffect} from 'react';
 import {FlatList, SafeAreaView} from 'react-native';
-import {PostCard} from '../../components/blog-card/PostCard';
+import {PostCard} from '../../components/post-card/PostCard';
 import {RenderLoader} from '../../components/loader/RenderLoader';
 import useData from '../../context/useData';
 import {fetchDataOnPage} from '../../utils/service/API';

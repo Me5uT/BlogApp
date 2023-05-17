@@ -44,7 +44,11 @@ export const PostCard = ({
             />
           </View>
           <View style={styles.summaryContainer}>
-            <Text style={styles.summary}>{summary}</Text>
+            <Text style={styles.summary} numberOfLines={5}>
+              {'\t'}
+              {'\t'}
+              {summary}
+            </Text>
           </View>
         </View>
 

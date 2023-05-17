@@ -23,6 +23,7 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: '#333333',
+    textAlign: 'center',
   },
   contentContainer: {
     flexDirection: 'row',
@@ -40,6 +41,7 @@ export const styles = StyleSheet.create({
   },
   summaryContainer: {
     flex: 2,
+    paddingHorizontal: 15,
   },
   summary: {
     fontSize: 14,
